@@ -1,5 +1,5 @@
 # offilne-k8s-install
-离线k8s部署
+离线k8s部署，仅仅适用于k8s 1.18.20版本部署
 
 
 
@@ -9,17 +9,17 @@
 
 内核版本: 建议3.10.0-1160.71.1.el7.x86_64
 
-
+k8s版本: 1.18.20
 
 ## 1.服务器规划
 
-| ip            | 部署服务     |      |
+| ip            | hostname     | 网卡 |
 | ------------- | ------------ | ---- |
-| xxx.xxx.xxx.a | k8s-master01 |      |
-| xxx.xxx.xxx.b | k8s-master02 |      |
-| xxx.xxx.xxx.c | k8s-master03 |      |
-| xxx.xxx.xxx.d | k8s-slave01  |      |
-| xxx.xxx.xxx.e | k8s-slave02  |      |
+| xxx.xxx.xxx.a | k8s-master01 | eno1 |
+| xxx.xxx.xxx.b | k8s-master02 | eno1 |
+| xxx.xxx.xxx.c | k8s-master03 | eno1 |
+| xxx.xxx.xxx.d | k8s-slave01  | eno1 |
+| xxx.xxx.xxx.e | k8s-slave02  | eno1 |
 
 vip: xxx.xxx.xxx.f
 
@@ -27,9 +27,8 @@ vip: xxx.xxx.xxx.f
 
 下载离线包到k8s-master01服务器/opt下
 
-离线包地址:
-
-提取码:
+离线包链接：https://pan.baidu.com/s/1TXmwwRQK9KttHHwwKSLdCQ 
+提取码：vavd
 
 
 
