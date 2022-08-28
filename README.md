@@ -54,11 +54,6 @@ name=CentOS-Local
 baseurl=file:///opt/offline-install/rpm-repo
 gpgcheck=0
 enabled=1
-[cdrom]
-name=cdrom
-baseurl=file:///mnt/cdrom
-gpgcheck=0
-enabled=1
 EOF
 ```
 
