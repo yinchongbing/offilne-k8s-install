@@ -65,20 +65,13 @@ yum makecache
 ```
 
 
-
-
-
-
-
-
-
 ## 4.kubernetes服务器配置
 
 每台Kubernetes服务器，包括Master、slave节点初始化内容如下：
 
 ### 4.1修改主机名
 
-\# 分别对每台主机执行如下操作
+分别对每台主机执行如下操作
 
 ```shell
 hostnamectl set-hostname k8s-master01
@@ -110,46 +103,6 @@ EOF
 ```shell
 ping k8s-slave01
 ```
-
-
-
-### 4.3配置yum源
-
-配置文件备份
-
-```shell
-cd /etc/yum.repos.d/
-rename .repo .repo.bak *
-```
-
- 创建配置(所有kubernets相关的服务器都需要配置yum repo源)
-
-```shell
-#配置Yum源文件
-cd /etc/yum.repos.d
-rename .repo .repo.bak *
-
-cat >> /etc/yum.repos.d/inspur-ici-repo.repo << EOF
-[inspur-ici-local]
-name=CentOS-Local
-baseurl=file:///opt/offline-install/rpm-repo
-gpgcheck=0
-enabled=1
-[cdrom]
-name=cdrom
-baseurl=file:///mnt/cdrom
-gpgcheck=0
-enabled=1
-EOF
-```
-
-服务端更新后客户端清除缓存
-
-```shell
-yum clean all
-yum makecache
-```
-
 
 
 ### 4.3禁用selinux
