@@ -679,7 +679,7 @@ etcd:
 imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers
 kind: ClusterConfiguration
 kubernetesVersion: v1.18.20
-controlPlaneEndpoint: xxx.xxx.xxx.f:8443     #高可用虚拟ip，使用前用ping测试呢个否访问，不能ping通检查第5节(必须修改)
+controlPlaneEndpoint: xxx.xxx.xxx.f:8443     #高可用虚拟ip，使用前用ping测试能否访问，不能ping通检查第5节(必须修改)
 networking:
   dnsDomain: cluster.local
   serviceSubnet: 10.96.0.0/12              #k8s服务网段，可自定义，避免与本地网段和docker网段冲突
