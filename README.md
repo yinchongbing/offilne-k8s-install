@@ -88,7 +88,7 @@ hostnamectl set-hostname k8s-slave01
 在主机的/etc/hosts文件中添加如下内容：
 
 ```shell
-cat >> /data01/hosts << EOF
+cat >> /etc/hosts << EOF
 #k8s cluster
 xxx.xxx.xxx.a k8s-master01
 xxx.xxx.xxx.b k8s-master02
